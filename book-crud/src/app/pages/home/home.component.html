@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="text-center display-3 my-3">Kitap Listem</h1>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let book of bookList">
+            <div class="card" >
+                <img [src]="book.imgPath" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{book.name}}</h5>
+                  <p class="card-text">{{book.author}}</p>
+                  <a (click)="updateBook(book.id)" class="btn btn-warning">Güncelle</a>
+                  <a (click)="deleteBook(book.id)" class="btn btn-danger">Sil</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    {{bookList | json}}
+</div>

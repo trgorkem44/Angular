@@ -1,0 +1,12 @@
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+nav{
+    background-color: #354259;
+    justify-content: space-between;
+    align-items: center;
+}
