@@ -1,0 +1,28 @@
+{
+  "employee": [
+    {
+      "nameSurname": "hande Subaşı 2",
+      "age": 30,
+      "salary": 768678678,
+      "gender": "Kadın",
+      "department": "Network",
+      "id": 2
+    },
+    {
+      "nameSurname": "Hasan Karakelle",
+      "age": 30,
+      "salary": 345345,
+      "department": "Software",
+      "gender": "Erkek",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "nameSurname": "eyüp helva ",
+      "age": 32,
+      "salary": 12000,
+      "department": "Help Desk",
+      "gender": "Erkek"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h1 class="text-center">Çalışan Listesi</h1>
+    <div class="d-flex justify-content-end">
+      <button type="button" (click)="newEmployee()" class="btn btn-success">Yeni Personel</button>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Ad Soyad</th>
+            <th scope="col">Cinsiyet</th>
+            <th scope="col">yaş</th>
+            <th scope="col">Birim</th>
+            <th scope="col">Maaş</th>
+            <th>Aksyion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeList">
+            <td>{{employee.nameSurname}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.department}}</td>
+            <td>{{employee.salary}}</td>
+            <td><button type="button" class="btn btn-sm btn-warning me-1" 
+              (click)="updateEmployee(employee.id)">Güncelle</button>
+                <button type="button" class="btn btn-sm btn-danger" (click)="deleteEmployee(employee.id)">Sil</button></td>
+          </tr>
+      
+        </tbody>
+      </table>
+</div>

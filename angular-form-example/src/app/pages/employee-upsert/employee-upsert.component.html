@@ -1,0 +1,57 @@
+<div class="container mt-5">
+    <h1 class="text-center">{{selecetedEmployeeId?'Çalışan Düzenle':'Yeni Çalışan'}}</h1>
+    <form #employeeForm="ngForm" (ngSubmit)="save(employeeForm)">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="nameSurname" class="form-label">Ad Soyad</label>
+                <input type="text" minlength="5" [(ngModel)]="employeeModel.nameSurname" #nameSurname="ngModel"
+                    class="form-control" required id="nameSurname" name="nameSurname">
+                <div class="alert alert-danger" role="alert" *ngIf="nameSurname.invalid&&nameSurname.touched">
+                    <p>Ad ve Soyad 5 karakterden büyük olmalıdır</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="age" class="form-label">Yaş</label>
+                <input type="number" required [(ngModel)]="employeeModel.age" #age="ngModel" class="form-control"
+                    id="age" name="age">
+                <div class="alert alert-danger" role="alert" *ngIf="age.invalid&&age.touched">
+                    Zorunlu Alan
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="salary" class="form-label">Maaş</label>
+                <input type="number" required [(ngModel)]="employeeModel.salary" #salary="ngModel" class="form-control"
+                    id="salary" name="salary">
+                <div class="alert alert-danger" role="alert" *ngIf="salary.invalid&&salary.touched">
+                    Zorunlu Alan
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="gender" class="form-label">Cinsiyet</label>
+                <select name="gender" required id="gender" class="form-control" [(ngModel)]="employeeModel.gender"
+                    #gender="ngModel">
+                    <option value="Erkek">Erkek</option>
+                    <option value="Kadın">Kadın</option>
+                </select>
+                <div class="alert alert-danger" role="alert" *ngIf="gender.invalid&&gender.touched">
+                    Zorunlu Alan
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="department" required class="form-label">Birim</label>
+                <select name="department" id="department" required
+                 class="form-control" [(ngModel)]="employeeModel.department"
+                    #department="ngModel">
+                    <option *ngFor="let department of departmentList" [value]="department">{{department}}</option>
+                </select>
+                <div class="alert alert-danger" role="alert" *ngIf="department.invalid&&department.touched">
+                    Zorunlu Alan
+                </div>
+            </div>
+            <div class="col-md-12 d-flex justify-content-end">
+                <button type="submit" [disabled]="employeeForm.invalid"
+                 class="btn btn-success">{{selecetedEmployeeId?'Güncelle':'Ekle'}}</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <h1 class="text-center">{{selecetedEmployeeId?'Çalışan Düzenle':'Yeni Çalışan'}}</h1>
+    <form [formGroup]="employeeForm" (ngSubmit)="save()">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="nameSurname" class="form-label">Ad Soyad</label>
+                <input type="text" formControlName="nameSurname"
+                    class="form-control" id="nameSurname" name="nameSurname">
+                    <div *ngIf="employeeForm.get('nameSurname')?.invalid&&employeeForm.get('nameSurname')?.touched"
+                     class="alert alert-danger" role="alert" >
+                        Zorunlu Alan
+                    </div>
+             
+            </div>
+            <div class="col-md-6">
+                <label for="age" class="form-label">Yaş</label>
+                <input type="number"  class="form-control"
+                   formControlName="age"    id="age" name="age">
+             
+            </div>
+            <div class="col-md-6">
+                <label for="salary" class="form-label">Maaş</label>
+                <input type="number"  class="form-control"
+                  formControlName="salary"  id="salary" name="salary">
+            
+            </div>
+            <div class="col-md-6">
+                <label for="gender" class="form-label">Cinsiyet</label>
+                <select name="gender" formControlName="gender"  id="gender" class="form-control">
+                    <option value="Erkek">Erkek</option>
+                    <option value="Kadın">Kadın</option>
+                </select>
+            
+            </div>
+            <div class="col-md-6">
+                <label for="department"  class="form-label">Birim</label>
+                <select name="department" id="department" formControlName="department"
+                 class="form-control">
+                    <option *ngFor="let department of departmentList" [value]="department">{{department}}</option>
+                </select>
+           
+            </div>
+            <div class="col-md-12 d-flex justify-content-end">
+                <button type="submit"
+                 class="btn btn-success">{{selecetedEmployeeId?'Güncelle':'Ekle'}}</button>
+            </div>
+        </div>
+    </form>
+</div>
