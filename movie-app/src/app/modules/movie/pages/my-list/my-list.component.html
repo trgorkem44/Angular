@@ -1,0 +1,8 @@
+<div class="container mt-5">
+    <h1 class="text-center display-4">Listem</h1>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let item of myMovieList">
+            <app-movie-card [movieInfo]="item" (deleteMovie)="selectedDeleteMovieId($event)"></app-movie-card>
+        </div>
+    </div>
+</div>

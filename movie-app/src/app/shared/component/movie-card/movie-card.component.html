@@ -1,0 +1,15 @@
+<div class="card" style="width: 100%;">
+    <img [src]="movieInfo.poster" class="card-img-top" >
+    <div class="card-body">
+      <h5 class="card-title">{{movieInfo.name}}</h5>
+      <p class="card-text">{{movieInfo.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Oyuncular : {{movieInfo.actors}}</li>
+      <li class="list-group-item">Tür :  {{movieInfo.type}}</li>
+      <li class="list-group-item">Puan : {{movieInfo.point}}</li>
+    </ul>
+    <div class="card-body">
+      <a  class="btn btn-sm btn-danger" (click)="deleteMovieToMyList(movieInfo.id)">Listemden Çıkar</a>
+    </div>
+  </div>

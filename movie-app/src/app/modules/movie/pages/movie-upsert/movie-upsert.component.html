@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <h1>{{selectedMovieId?'Film Güncelle':'Film Ekle'}}</h1>
+    <form [formGroup]="movieForm">
+        <div class="my-3">
+            <label for="name" class="form-label">Film Adı</label>
+            <input type="text" formControlName="name"  class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+            <label for="type" class="form-label">Film Türü</label>
+            <select id="type" class="form-control" formControlName="type">
+                <option [value]="item" *ngFor="let item of movieTypeList">{{item}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="poster" class="form-label">Film Görseli</label>
+            <input type="text" formControlName="poster"  class="form-control" id="poster">
+        </div>
+        <div class="mb-3">
+            <label for="actors" class="form-label">Filmin Oyuncuları</label>
+            <input type="text" formControlName="actors"  class="form-control" id="actors">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Filmin Açıklaması</label>
+            <input type="text" formControlName="description" class="form-control" id="description">
+        </div>
+        <div class="mb-3">
+            <label for="point" class="form-label">Filmin Puanı</label>
+            <input type="number" formControlName="point"  class="form-control" id="point">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-danger  me-2" (click)="backPage()" >Geri</button>
+            <button class="btn btn-primary" (click)="save()">Kaydet</button>
+        </div>
+    </form>
+   
+</div>

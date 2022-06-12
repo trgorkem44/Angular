@@ -1,0 +1,9 @@
+<header class="px-5 py-3">
+   <a routerLink="/"> <img class="img-fluid logo" alt="" src="https://icon-library.com/images/movie-app-icon/movie-app-icon-28.jpg"></a>
+    <div>
+        <a *ngIf="currentUser?.userType === 'admin'" class="btn btn-success me-2" routerLink="/movie/upsert-movie">Yeni Film</a>
+        <a *ngIf="currentUser?.userType === 'user'" class="btn btn-success me-2" routerLink="/movie/my-list">Listem</a>
+        <button type="button" (click)="logout()" class="btn btn-danger px-3">Çıkış </button>
+    
+    </div>
+</header>

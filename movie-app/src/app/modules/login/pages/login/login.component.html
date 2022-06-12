@@ -1,0 +1,14 @@
+<div class="container login mt-5">
+    <h1 class="text-center display-3 mb-5">Giriş Yap</h1>
+    <div class="my-3">
+        <label for="userName" class="form-label">Kullanıcı Adı</label>
+        <input type="text" [(ngModel)]="userName" class="form-control" id="userName">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Şifre</label>
+        <input type="password" [(ngModel)]="password" class="form-control" id="password">
+    </div>
+    <div class="mb-3 d-flex justify-content-center">
+        <button type="button" (click)="login()" class="btn btn-success px-5">Giriş</button>
+    </div>
+</div>

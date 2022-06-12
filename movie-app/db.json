@@ -1,0 +1,42 @@
+{
+  "movie": [
+    {
+      "id": 1,
+      "name": "Erşan Kuneli",
+      "type": "Komedi",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8n1PRRgIfjbJuUS1rxhN_Qo-p2VXGDTdwxQ&usqp=CAU",
+      "point": 4,
+      "actors": "Cem Yılmaz,Ezgi Mola",
+      "description": "Erşan Kuneli"
+    },
+    {
+      "id": 2,
+      "name": "asdasd",
+      "type": "Belgesel",
+      "poster": "asdasd",
+      "point": 5,
+      "actors": "234234",
+      "description": "asdasd"
+    }
+  ],
+  "myList": [
+    {
+      "id": 2,
+      "name": "Zamana karşı",
+      "type": "Bilim Kurgu",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb2H61CEMu4okwH2z93eA5aKJc6O3fBBxZHw&usqp=CAU",
+      "point": 9,
+      "actors": "Amanda Seyfried, Justin Timberlake, Cillian Murphy",
+      "description": "zamana karşı"
+    },
+    {
+      "id": 1,
+      "name": "Erşan Kuneli",
+      "type": "Komedi",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8n1PRRgIfjbJuUS1rxhN_Qo-p2VXGDTdwxQ&usqp=CAU",
+      "point": 4,
+      "actors": "Cem Yılmaz,Ezgi Mola",
+      "description": "Erşan Kuneli"
+    }
+  ]
+}
